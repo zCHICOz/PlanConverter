@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <title>Tabela</title>
+  </head>
+  <body>
+    <table class="table">
+      <thead>
+        <% header.forEach(col => { %>
+          <th scope="col"><%= col %></th>
+        <% }) %>
+      </thead>
+      <tbody>
+        <% rows.forEach(row => { %>
+          <tr>
+            <% row.forEach(element => { %>
+              <td scope="row"><%= element %></td>
+            <% }) %> 
+          </tr>
+        <% }) %>
+      </tbody>
+    </table>
+  </body>
+</html>
